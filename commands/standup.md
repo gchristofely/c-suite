@@ -19,8 +19,9 @@ skill isn't authorized in this surface, note it briefly and move on.
 - **CPO** — roadmap/backlog status (`github` issues), product-analytics signal (`Vercel`/Supabase
   read), and discovery in flight.
 
-Also check the `knowledge` base (project `erhjcqhcbrycecfijbyv`) for decisions or insights logged
-since the last window.
+Also check the decision log — `knowledge.decisions` (project `erhjcqhcbrycecfijbyv`) — for decisions
+recorded since the last window (`order by decided_at desc`), and note any that were superseded or
+reversed.
 
 Then synthesize **one briefing**:
 1. **Wins** since last time.
