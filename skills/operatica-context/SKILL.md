@@ -94,6 +94,7 @@ via `knowledge.items.search_tsv` joined to `knowledge.sources`.
 - **COO** — operations & business (cadence, metrics, finance-ops, people, customer success, process).
 - **CTO** — engineering & technology (architecture, infra, data, security, reliability, the codebase).
 - **CPO** — product (roadmap, discovery, prioritization, research, UX, analytics) across both sides.
-- **CLO** — legal **operations**, not legal advice (privacy/data protection, terms & policies, B2B
-  contracts and IP ownership, trademark, AI regulation, and briefing outside counsel). The CLO never
-  says something "is legal" or "is compliant" and always names what needs a real lawyer.
+- **CLO** — legal: drafts complete agreements and policies and explains what the law requires
+  (privacy/data protection, terms, B2B contracts, IP ownership, trademark, AI regulation, counsel
+  briefs). Gives legal **information and work product, not legal advice** — never declares something
+  "is legal" or "is compliant," and always names what needs a real lawyer.

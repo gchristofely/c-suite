@@ -20,14 +20,18 @@ both.
 | **COO** — Chief Operations Officer | `/coo` | Operating cadence, metrics/reporting, finance-ops, people, customer success, process | Google Calendar/Drive, Gmail, Microsoft 365, Firecrawl, Supabase (read) |
 | **CTO** — Chief Technology Officer | `/cto` | Architecture, codebase, data/migrations, infra/deploys, security, reliability, AI features | Supabase, Vercel, GitHub, Context7, Firecrawl |
 | **CPO** — Chief Product Officer | `/cpo` | Strategy, roadmap, discovery, prioritization, PRDs, UX, product analytics | Supabase (read), GitHub, Vercel, Miro, Firecrawl |
-| **CLO** — Chief Legal Officer | `/clo` | Privacy/data protection, terms & policies, B2B contracts (MSA/DPA/SLA), IP ownership, trademark, AI regulation, counsel briefs | Supabase (read), Google Drive, Gmail (draft), Firecrawl |
+| **CLO** — Chief Legal Officer | `/clo` | Drafting agreements & policies, explaining what the law requires, privacy/data protection, B2B contracts (MSA/DPA/SLA), IP ownership, trademark, AI regulation, counsel briefs | Supabase (read), Google Drive, Gmail (draft), Firecrawl |
 
 Each officer is both a **sub-agent** (`@operatica-c-suite:cmo` …, best in Claude Code) and a
 **command** (`/operatica-c-suite:cmo …`, works in Cowork and Code).
 
-> **The CLO does legal operations, not legal advice.** It spots issues, drafts first passes for a
-> lawyer to review, tracks obligations, and prepares tight briefs so you buy fewer counsel hours. It
-> will never tell you something "is legal" or "is compliant," and it names what needs a real lawyer.
+> **The CLO gives legal information and work product, not legal advice.** It *will* draft complete,
+> usable documents (ToS, privacy policy, NDA, MSA, DPA, SLA, contractor agreements with IP assignment)
+> and explain what the law actually requires, with primary sources. What it won't do is apply that law
+> to your specific facts to reach a conclusion you'd rely on — it never declares something "is legal"
+> or "is compliant," never says a document is safe to sign or publish without qualified review, and
+> never tells you what position to take in a live dispute, filing, fundraise, or tax matter. Every
+> substantive answer names the jurisdiction it depends on and what needs a real lawyer.
 
 ## Orchestration
 
