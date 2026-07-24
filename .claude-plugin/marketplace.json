@@ -10,7 +10,7 @@
     {
       "name": "operatica-c-suite",
       "source": "./",
-      "description": "A virtual C-suite (CMO, COO, CTO, CPO) for running Operatica.ai.",
+      "description": "A virtual C-suite (CMO, COO, CTO, CPO, CLO) for running Operatica.ai.",
       "category": "productivity",
       "keywords": ["operatica", "c-suite", "executive", "saas"]
     }

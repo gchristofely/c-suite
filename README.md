@@ -1,6 +1,6 @@
 # Operatica C-Suite
 
-A virtual **C-suite** for running [Operatica.ai](https://github.com/gchristofely/c-suite) — four
+A virtual **C-suite** for running [Operatica.ai](https://github.com/gchristofely/c-suite) — five
 executive sub-agents that compose your connected tools, skills, and a shared knowledge base to help
 you run the business. Built as a Claude Code / Cowork **plugin**.
 
@@ -20,14 +20,19 @@ both.
 | **COO** — Chief Operations Officer | `/coo` | Operating cadence, metrics/reporting, finance-ops, people, customer success, process | Google Calendar/Drive, Gmail, Microsoft 365, Firecrawl, Supabase (read) |
 | **CTO** — Chief Technology Officer | `/cto` | Architecture, codebase, data/migrations, infra/deploys, security, reliability, AI features | Supabase, Vercel, GitHub, Context7, Firecrawl |
 | **CPO** — Chief Product Officer | `/cpo` | Strategy, roadmap, discovery, prioritization, PRDs, UX, product analytics | Supabase (read), GitHub, Vercel, Miro, Firecrawl |
+| **CLO** — Chief Legal Officer | `/clo` | Privacy/data protection, terms & policies, B2B contracts (MSA/DPA/SLA), IP ownership, trademark, AI regulation, counsel briefs | Supabase (read), Google Drive, Gmail (draft), Firecrawl |
 
 Each officer is both a **sub-agent** (`@operatica-c-suite:cmo` …, best in Claude Code) and a
 **command** (`/operatica-c-suite:cmo …`, works in Cowork and Code).
 
+> **The CLO does legal operations, not legal advice.** It spots issues, drafts first passes for a
+> lawyer to review, tracks obligations, and prepares tight briefs so you buy fewer counsel hours. It
+> will never tell you something "is legal" or "is compliant," and it names what needs a real lawyer.
+
 ## Orchestration
 
 - **`/c-suite <request>`** — routes your request to the right officer, or convenes a **board meeting**
-  across all four for cross-functional decisions and synthesizes a CEO-ready recommendation.
+  across all five for cross-functional decisions and synthesizes a CEO-ready recommendation.
 - **`/standup [focus]`** — a read-only cross-functional status pass: each officer reports wins, risks,
   and what needs a decision, rolled up into one briefing.
 - **`/decision <log or look up>`** — record a decision in the decision log, or recall what was decided
@@ -41,8 +46,8 @@ The officers' shared memory lives entirely in the **`operatica_public`** Supabas
 Cowork and Code:
 
 - **`knowledge.facts`** — the canonical company profile (what Operatica.ai is, product, ICP, pricing,
-  positioning, metrics, competitors). Rows flagged `status = 'needs_input'` mark the gaps to fill.
-  Officers pull facts here instead of assuming them.
+  positioning, metrics, competitors) plus legal facts, obligations, and contract terms. Rows flagged
+  `status = 'needs_input'` mark the gaps to fill. Officers pull facts here instead of assuming them.
 - **`knowledge.decisions`** — the decision log (ADR): what was decided, why, alternatives, status,
   who, and `supersedes` links. Officers recall before advising and log after deciding.
 - **`knowledge.items`** / **`knowledge.sources`** — accumulated knowledge (insights, principles,
@@ -90,6 +95,7 @@ does not read machine-local skills).
 /coo build this week's operating review from our metrics and flag anything slipping
 /cto review the knowledge schema and propose RLS policies so the app can read it per-workspace
 /cpo pressure-test the onboarding flow for the B2B consultancy persona with user stories
+/clo who owns the methodology once we automate it for a client? prep a brief for counsel
 /c-suite should we prioritize the consumer referral loop or the B2B methodology importer next?
 /standup this week
 /decision log: we're going self-serve first for the B2B side, sales-assist later
@@ -123,8 +129,8 @@ c-suite/
 ├── .claude-plugin/
 │   ├── plugin.json          # manifest (name: operatica-c-suite)
 │   └── marketplace.json     # marketplace "operatica" → this plugin
-├── agents/                  # cmo.md, coo.md, cto.md, cpo.md  (sub-agents)
-├── commands/                # cmo/coo/cto/cpo + c-suite + standup + decision  (portable entry points)
+├── agents/                  # cmo.md, coo.md, cto.md, cpo.md, clo.md  (sub-agents)
+├── commands/                # cmo/coo/cto/cpo/clo + c-suite + standup + decision  (entry points)
 ├── skills/
 │   └── operatica-context/   # operating manual: behavior, how to query the tables, guardrails (no facts)
 ├── README.md
