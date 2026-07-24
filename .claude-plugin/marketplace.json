@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "operatica",
+  "owner": {
+    "name": "Grant Christofely",
+    "url": "https://github.com/gchristofely"
+  },
+  "description": "Operatica.ai internal plugins for Claude Code and Cowork.",
+  "plugins": [
+    {
+      "name": "operatica-c-suite",
+      "source": "./",
+      "description": "A virtual C-suite (CMO, COO, CTO, CPO) for running Operatica.ai.",
+      "category": "productivity",
+      "keywords": ["operatica", "c-suite", "executive", "saas"]
+    }
+  ]
+}
