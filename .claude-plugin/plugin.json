@@ -2,8 +2,8 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "operatica-c-suite",
   "displayName": "Operatica C-Suite",
-  "version": "0.1.0",
-  "description": "A virtual C-suite for Operatica.ai — CMO, COO, CTO, and CPO sub-agents that compose your connected tools, skills, and knowledge base to help you run the business. Works in Claude Code and Cowork.",
+  "version": "0.2.0",
+  "description": "A virtual C-suite for Operatica.ai — CMO, COO, CTO, CPO, and CLO sub-agents that compose your connected tools, skills, and knowledge base to help you run the business. Works in Claude Code and Cowork.",
   "author": {
     "name": "Grant Christofely",
     "url": "https://github.com/gchristofely"
@@ -19,6 +19,8 @@
     "coo",
     "cto",
     "cpo",
+    "clo",
+    "legal",
     "saas",
     "marketing",
     "operations",

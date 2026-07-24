@@ -18,6 +18,8 @@ skill isn't authorized in this surface, note it briefly and move on.
   reliability, and the top technical risks.
 - **CPO** — roadmap/backlog status (`github` issues), product-analytics signal (`Vercel`/Supabase
   read), and discovery in flight.
+- **CLO** — open legal/privacy exposures, obligations or renewals coming due, anything shipping this
+  window that needs a legal look, and what's waiting on outside counsel.
 
 Also check the decision log — `knowledge.decisions` (project `erhjcqhcbrycecfijbyv`) — for decisions
 recorded since the last window (`order by decided_at desc`), and note any that were superseded or
